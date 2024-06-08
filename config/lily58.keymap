@@ -23,7 +23,7 @@
             bindings = <&kp>, <&kp>;
         };
         hm: home_row_mod {
-            compatible = "zmk,behavior-hod-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
