@@ -127,9 +127,7 @@
 
         );
 
-        DEFINE_HRM(hms, home_row_mod_for_shift, &kp, &kp, KEYS_L KEYS_R
-
-        THUMBS = );
+        DEFINE_HRM(hms, home_row_mod_for_shift, &kp, &kp, KEYS_L KEYS_R THUMBS);
 
         DEFINE_HRM(hltl, home_row_mod_for_layer_tap_left, &mo, &kp, KEYS_R,
 
