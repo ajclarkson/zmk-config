@@ -111,7 +111,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            hold-key-trigger-positions = < KEYS_R >;
+            hold-trigger-key-positions = < KEYS_R >;
             hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
 
@@ -124,7 +124,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            hold-key-trigger-positions = < KEYS_L >;
+            hold-trigger-key-positions = < KEYS_L >;
             hold-trigger-on-release;
             bindings = <&kp>, <&kp>;
 
