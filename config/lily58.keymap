@@ -100,6 +100,17 @@
         __VA_ARGS__                                            \
     }
 
+// This helper macro allow one to define a normal key with a special output with
+// pressing shift. This is useful when you want to create a key that, its
+// shifted value, differs from the standard behavior.
+#define DEFINE_SHIFT_KEY(_behavior_name, _normal_key, _shifted_key) \
+    _behavior_name: _behavior_name {                                \
+      compatible = "zmk,behavior-mod-morph";                        \
+      #binding-cells = <0>;                                         \
+      bindings = <_normal_key>, <_shifted_key>;                     \
+      mods = <(MOD_LSFT|MOD_RSFT)>;                                 \
+    }
+
 &mt { tapping-term-ms = <400>; };
 
 / {
@@ -132,6 +143,9 @@
         require-prior-idle-ms = <100>;
 
         );
+
+        DEFINE_SHIFT_KEY(kp_bspcdel, &kp BACKSPACE, &kp DELETE);
+        
     };
 
     keymap {
