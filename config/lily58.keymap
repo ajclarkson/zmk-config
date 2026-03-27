@@ -12,15 +12,6 @@
 
 / {
     behaviors {
-        hym: hyper_meh {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
         hm: home_row_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -45,7 +36,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
@@ -54,17 +45,17 @@
             //                     | ALT  | GUI  | LOWER|  SPACE (Hyper) |  | ENTER (MEH) | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1       &kp N2      &kp N3      &kp N4    &kp N5                                                                              &kp N6           &kp N7      &kp N8      &kp N9        &kp N0          &kp GRAVE
-&kp TAB    &kp Q        &kp W       &kp E       &kp R     &kp T                                                                               &kp Y            &kp U       &kp I       &kp O         &kp P           &kp MINUS
-&kp LCTRL  &hm LCTRL A  &hm LALT S  &hm LGUI D  &lt 3 F   &kp G                                                                               &kp H            &lt 3 J     &hm LGUI K  &hm LALT L    &hm LCTRL SEMI  &kp SQT
-&kp LSHFT  &kp Z        &kp X       &kp C       &kp V     &kp B                       &hym LA(LC(LG(LSHFT))) LBKT    &hym LA(LC(LSHFT)) RBKT  &kp N            &kp M       &kp COMMA   &lt 4 PERIOD  &kp FSLH        &kp RSHFT
-                                    &kp LALT    &kp LGUI  &kp LA(LC(LG(LEFT_SHIFT)))  &hm LSHFT SPACE                &hm LSHFT RET            &lt 2 BACKSPACE  &kp ESCAPE  &kp RGUI
+&kp ESC        &kp N1       &kp N2      &kp N3      &kp N4   &kp N5                                                             &kp N6        &kp N7   &kp N8      &kp N9        &kp N0          &kp GRAVE
+&kp TAB        &kp Q        &kp W       &kp E       &kp R    &kp T                                                              &kp Y         &kp U    &kp I       &kp O         &kp P           &kp MINUS
+&kp BACKSPACE  &hm LCTRL A  &hm LALT S  &hm LGUI D  &lt 3 F  &kp G                                                              &kp H         &lt 3 J  &hm LGUI K  &hm LALT L    &hm LCTRL SEMI  &kp SQT
+&lt 1 COLON    &kp Z        &kp X       &kp C       &kp V    &kp B                       &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N         &kp M    &kp COMMA   &lt 4 PERIOD  &kp FSLH        &kp RSHFT
+                                        &none       &none    &kp LA(LC(LG(LEFT_SHIFT)))  &mt LSHFT SPACE     &mt LSHFT RET      &lt 2 ESCAPE  &none    &none
             >;
 
             label = "Base";
         };
 
-        lower_layer {
+        navigation_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
             // |       |     |     |      |      |      |                   | COPY | UNDO  |       |      | PASTE |       |
@@ -83,7 +74,7 @@
             label = "Nav";
         };
 
-        raise_layer {
+        controls_layer {
             // ------------------------------------------------------------------------------------------------------------
             // | BT_CLR| BT 1| BT 2| BT 3 | BT 4 | BT 5 |                   |std_u |       |       |      |       | EP TOG |
             // |       |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -100,7 +91,7 @@
             >;
         };
 
-        layer_3 {
+        symbol_layer {
             bindings = <
 &trans  &trans           &trans         &trans            &trans             &trans                                        &trans       &trans          &trans           &trans         &trans             &trans
 &trans  &trans           &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PLUS                                      &trans       &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans         &trans             &trans
@@ -112,12 +103,12 @@
             label = "Sym";
         };
 
-        layer_4 {
+        window_management_layer {
             bindings = <
 &trans  &trans  &trans            &trans            &trans            &trans                    &trans             &trans                    &trans                     &trans  &trans  &trans
 &trans  &trans  &trans            &trans            &trans            &trans                    &trans             &trans                    &trans                     &trans  &trans  &trans
 &trans  &trans  &kp LG(NUMBER_3)  &kp LG(NUMBER_2)  &kp LG(NUMBER_1)  &trans                    &kp LS(LG(GRAVE))  &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &trans  &trans  &trans
-&trans  &trans  &trans            &trans            &trans            &trans  &trans    &trans  &trans             &trans                    &trans                     &trans  &trans  &trans
+&trans  &trans  &kp LG(NUMBER_6)  &kp LG(N5)        &kp LG(NUMBER_4)  &trans  &trans    &trans  &trans             &kp LS(LG(TAB))           &kp LG(TAB)                &trans  &trans  &trans
                                   &trans            &trans            &trans  &trans    &trans  &trans             &trans                    &trans
             >;
 
