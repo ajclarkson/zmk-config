@@ -8,7 +8,27 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+// Helpful names for common keys
 #define LEFT_HYPER  LS(LA(LC(LGUI)))
+
+#define MAC_NEXT_WORD   LA(RIGHT)
+#define MAC_WRDN    MAC_NEXT_WORD
+
+#define MAC_PREVIOUS_WORD   LA(LEFT)
+#define MAC_WRDP    MAC_PREVIOUS_WORD
+
+#define MAC_START_OF_LINE   LG(LEFT)
+#define MAC_STTL    MAC_START_OF_LINE
+
+#define MAC_END_OF_LINE LG(RIGHT)
+#define MAC_ENDL    MAC_END_OF_LINE
+
+#define MAC_CUT LG(X)
+#define MAC_COPY    LG(C)
+#define MAC_PASTE   LG(V)
+#define MAC_UNDO    LG(Z)
+#define MAC_REDO    LG(R)
+
 #define LT0  5  // left-top row
 #define LT1  4
 #define LT2  3
