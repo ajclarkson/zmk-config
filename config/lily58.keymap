@@ -165,7 +165,7 @@
 &kp TAB        &kp Q         &kp W        &kp E        &kp R      &kp T                                                                                 &kp Y         &kp U      &kp I        &kp O         &kp P            &kp MINUS
 &kp GRAVE &hml LCTRL A  &hml LALT S  &hml LGUI D  &hltl 3 F  &kp G                                                                                 &kp H         &hltr 3 J  &hmr LGUI K  &hmr LALT L   &hmr LCTRL SEMI  &kp SQT
 &lt 1 BSLH     &kp Z         &kp X        &kp C        &kp V      &kp B                       &kp LA(LC(LG(LEFT_SHIFT)))    &kp LA(LC(LG(LEFT_SHIFT)))  &kp N         &kp M      &kp COMMA    &lt 4 PERIOD  &kp FSLH         &kp EQUAL
-                                          &none        &none      &hmhb LEFT_HYPER &kp_bspcdel &hms LSHFT SPACE              &hms LSHFT RET              &lt 2 ESCAPE  &none      &none
+                                          &none        &none      &hmhb LEFT_HYPER BACKSPACE &hms LSHFT SPACE              &hms LSHFT RET              &lt 2 ESCAPE  &none      &none
             >;
 
             label = "Base";
