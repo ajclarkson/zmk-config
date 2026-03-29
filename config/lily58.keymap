@@ -144,6 +144,8 @@
         );
 
         DEFINE_SHIFT_KEY(kp_bspcdel, &kp BACKSPACE, &kp DELETE);
+
+        DEFINE_HRM(hmhb, home_row_mod_hyper_backspc, LEFT_HYPER, &kp_bspcdel, KEYS_L KEYS_R THUMBS);
         
     };
 
