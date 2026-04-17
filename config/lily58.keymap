@@ -231,7 +231,7 @@
             bindings = <
 &trans  &trans    &trans  &trans           &trans      &trans                         &trans            &trans         &trans        &trans                 &trans             &trans
 &trans  &trans    &none   &kp POUND        &kp CARET   &none                          &kp LEFT_BRACE    &kp LESS_THAN  &kp EQUAL     &kp GREATER_THAN        &kp RIGHT_BRACE    &kp SLASH
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp LEFT_BRACKET  &kp LPAR       &kp COLON     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp MINUS
+&trans  &kp EXCL  &kp AT  &kp LA(HASH)  &kp DOLLAR  &kp PERCENT                    &kp LEFT_BRACKET  &kp LPAR       &kp COLON     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp MINUS
 &trans  &trans    &trans  &none            &none       &none        &trans    &trans  &kp PIPE          &kp AMPERSAND  &kp ASTERISK  &kp PLUS               &kp UNDER          &kp GRAVE
                           &trans           &trans      &trans       &trans    &trans  &trans            &trans         &trans
             >;
