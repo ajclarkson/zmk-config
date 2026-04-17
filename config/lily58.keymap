@@ -181,7 +181,7 @@
             //                     | ALT  | GUI  | LOWER|  SPACE (Hyper) |  | ENTER (MEH) | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC        &kp N1        &kp N2       &kp N3       &kp N4     &kp N5                                                                                &kp N6        &kp N7     &kp N8       &kp N9        &kp N0           &kp GRAVE
+&kp ESC        &kp N1        &kp N2       &kp N3       &kp N4     &kp N5                                                                                &kp N6        &kp N7     &kp N8       &kp N9        &kp N0           &kp C_PP
 &kp TAB        &kp Q         &kp W        &kp E        &kp R      &kp T                                                                                 &kp Y         &kp U      &kp I        &kp O         &kp P            &kp MINUS
 &kp GRAVE &hml LCTRL A  &hml LALT S  &hml LGUI D  &hltl 3 F  &kp G                                                                                 &kp H         &hltr 3 J  &hmr LGUI K  &hmr LALT L   &hmr LCTRL SEMI  &kp SQT
 &lt 1 BSLH     &kp Z         &kp X        &kp C        &kp V      &kp B                       &kp LA(LC(LG(LEFT_SHIFT)))    &kp LA(LC(LG(LEFT_SHIFT)))  &kp N         &kp M      &kp COMMA    &lt 4 PERIOD  &kp FSLH         &kp EQUAL
@@ -201,7 +201,7 @@
 
             bindings = <
 &kp F1  &kp F2     &kp F3    &kp F4    &kp F5     &kp F6                    &kp F7      &kp F8      &kp F9    &kp F10     &kp F11       &kp F12
-&trans  &trans     &trans    &trans    &trans     &trans                    &kp LG(C)   &kp LG(Z)   &trans    &trans      &kp LG(V)     &trans
+&trans  &trans     &trans    &trans    &trans     &trans                    &kp MAC_UNDO   &kp MAC_CUT &kp MAC_COPY    &kp MAC_PASTE      &kp MAC_REDO    &trans
 &trans  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans                    &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT   &kp K_VOL_UP  &none
 &trans  &trans     &trans    &trans    &trans     &trans  &trans    &trans  &kp C_PREV  &kp C_NEXT  &kp C_PP  &kp K_MUTE  &kp K_VOL_DN  &trans
                              &trans    &trans     &trans  &trans    &trans  &trans      &trans      &trans
@@ -230,8 +230,8 @@
         symbol_layer {
             bindings = <
 &trans  &trans    &trans  &trans           &trans      &trans                         &trans            &trans         &trans        &trans                 &trans             &trans
-&trans  &trans    &none   &kp POUND        &kp CARET   &none                          &kp LEFT_BRACE    &kp LESS_THAN  &kp EQUAL     &kp RIGHT_BRACE        &kp RIGHT_BRACE    &kp SLASH
-&trans  &kp EXCL  &kp AT  &kp NON_US_HASH  &kp DOLLAR  &kp PERCENT                    &kp LEFT_BRACKET  &kp LPAR       &kp COLON     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp MINUS
+&trans  &trans    &none   &kp POUND        &kp CARET   &none                          &kp LEFT_BRACE    &kp LESS_THAN  &kp EQUAL     &kp GREATER_THAN        &kp RIGHT_BRACE    &kp SLASH
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp LEFT_BRACKET  &kp LPAR       &kp COLON     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp MINUS
 &trans  &trans    &trans  &none            &none       &none        &trans    &trans  &kp PIPE          &kp AMPERSAND  &kp ASTERISK  &kp PLUS               &kp UNDER          &kp GRAVE
                           &trans           &trans      &trans       &trans    &trans  &trans            &trans         &trans
             >;
